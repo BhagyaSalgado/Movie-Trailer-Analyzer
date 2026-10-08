@@ -277,7 +277,8 @@
     <span class="label">Contact Us</span>
     <h2 style="margin-bottom:28px">Get in Touch</h2>
     <div class="contact">
-      <form id="cf" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="cf" action="/api/contact" method="POST">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <label for="cf-name">Name<input id="cf-name" name="name" required placeholder="Your name"></label>
         <label for="cf-email">Email address<input id="cf-email" name="email" type="email" required placeholder="you@example.com"></label>
         <label for="cf-msg">Message<textarea id="cf-msg" name="message" required placeholder="Your message"></textarea></label>

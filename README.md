@@ -30,8 +30,15 @@ Most changes happen in **`js/content.js`**:
 
 ## Contact form
 
-1. Create a free form at [formspree.io](https://formspree.io).
-2. In `index.html`, replace `YOUR_FORM_ID` in `action="https://formspree.io/f/YOUR_FORM_ID"` with your form ID.
+The form posts to a Vercel serverless function (`api/contact.js`), which emails each message through [Resend](https://resend.com).
+
+1. Sign up at resend.com with **aimovieanalyzer@gmail.com**, then create an API key.
+2. In Vercel, open **Project → Settings → Environment Variables** and add:
+   - `RESEND_API_KEY`: your Resend API key
+   - `CONTACT_TO`: `aimovieanalyzer@gmail.com`
+3. Redeploy from **Deployments → ⋯ → Redeploy**.
+
+Messages arrive with the sender's address as *Reply-To*, so you can reply to them directly. The form works only on the deployed site, not with Live Server.
 
 ## Run locally
 

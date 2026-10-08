@@ -14,17 +14,19 @@ document.getElementById('sups').innerHTML=SUPS.map(person).join('');
 document.getElementById('team').innerHTML=TEAM.map(person).join('');
 
 /* contact form (preview only) */
-/* contact form via Formspree */
+/* contact form → Vercel function (api/contact.js) */
 const cf=document.getElementById('cf');
 cf.addEventListener('submit',async e=>{
   e.preventDefault();
-  const ok=document.getElementById('cf-ok');
-  if(cf.action.includes('YOUR_FORM_ID')){ok.textContent='Contact form not connected yet. Add your Formspree form ID in index.html.';ok.hidden=false;return;}
+  const ok=document.getElementById('cf-ok'),btn=cf.querySelector('button[type=submit]');
+  btn.disabled=true;btn.textContent='Sending…';
   try{
-    const r=await fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{Accept:'application/json'}});
-    ok.textContent=r.ok?'Thank you! Your message has been sent.':'Sorry, something went wrong. Please email us directly.';
-  }catch{ok.textContent='Sorry, something went wrong. Please email us directly.';}
-  ok.hidden=false;if(ok.textContent.startsWith('Thank'))cf.reset();
+    const r=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(cf)))});
+    const d=await r.json().catch(()=>({}));
+    if(r.ok){ok.style.color='#1c9a6c';ok.textContent='Thank you! Your message has been sent.';cf.reset();}
+    else{ok.style.color='#d93a2b';ok.textContent=d.error||'Sorry, something went wrong. Please email us directly.';}
+  }catch{ok.style.color='#d93a2b';ok.textContent='Sorry, something went wrong. Please email us directly.';}
+  ok.hidden=false;btn.disabled=false;btn.textContent='Submit';
 });
 
 /* demo video */

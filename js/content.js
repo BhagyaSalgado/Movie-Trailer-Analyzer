@@ -5,7 +5,7 @@
 /* Demo video: paste a YouTube video ID (the part after watch?v=). Leave "" to show the placeholder. */
 const DEMO_VIDEO_ID = "";
 
-/* Contact form: create a free form at https://formspree.io and put its ID in index.html (action="https://formspree.io/f/YOUR_FORM_ID"). */
+/* Contact form: handled by api/contact.js on Vercel (see README → Contact form). */
 
 const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1NJbVSpjDbUlP2yVa8q1N7v0w4Q7WDQF-?usp=sharing";
 
@@ -16,12 +16,12 @@ const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1NJbVSpjDbUlP2yVa8q
 const MILESTONES=[
   {date:"March 2026",title:"Project Proposal",desc:"Presentation and report defining the research problem, objectives and proposed solution for approval.",marks:12},
   {date:"May 2026",title:"Progress Presentation I",desc:"Review of 50% completion, highlighting gaps or inconsistencies in the design and requirements.",marks:15},
-  {date:"Date TBC",title:"Research Paper",desc:"Paper describing the contribution to existing knowledge, with due recognition of referenced work.",marks:10},
-  {date:"Date TBC",title:"Progress Presentation II",desc:"Review of 90% completion with a system demonstration and research poster.",marks:18},
-  {date:"Date TBC",title:"Website Assessment",desc:"Public website presenting the research scope, milestones, documents and team.",marks:2},
-  {date:"Date TBC",title:"Progress Reports & Logbook",desc:"Status reports and the weekly logbook signed by the supervisor.",marks:4},
-  {date:"Date TBC",title:"Final Report",desc:"Individual and group final reports documenting the complete research and its evaluation.",marks:19},
-  {date:"Date TBC",title:"Final Presentation & Viva",desc:"Final demonstration of the complete system followed by an individual viva.",marks:20}
+  {date:"August 2026",title:"Progress Presentation II",desc:"Review of 90% completion with a system demonstration and research poster.",marks:18},
+  {date:"October 2026",title:"Website Assessment",desc:"Public website presenting the research scope, milestones, documents and team.",marks:2},
+  {date:"October 2026",title:"Progress Reports & Logbook",desc:"Status reports and the weekly logbook signed by the supervisor.",marks:4},
+  {date:"October 2026",title:"Final Presentation & Viva",desc:"Final demonstration of the complete system followed by an individual viva.",marks:20},
+  {date:"October 2026",title:"Research Paper",desc:"Paper describing the contribution to existing knowledge, with due recognition of referenced work.",marks:10},
+  {date:"October 2026",title:"Final Report",desc:"Individual and group final reports documenting the complete research and its evaluation.",marks:19}
 ];
 const DOCS=[
   ["Topic Assessment","Topic Assessment Form (TAF)","https://drive.google.com/file/d/1hhhpFu8ep5x-lBX_dxCQxlZkQRE61Ph7/view?usp=sharing"],
