@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Movie Trailer Analyzer | R26-IT-142</title>
+<meta name="description" content="AI-Powered Movie Trailer Analyzer for Predicting Audience Reactions and Engagement. SLIIT research project R26-IT-142.">
+<meta property="og:title" content="AI-Powered Movie Trailer Analyzer | R26-IT-142">
+<meta property="og:description" content="Multimodal AI research predicting audience reactions to movie trailers.">
+<meta property="og:image" content="images/logo.png">
+<link rel="icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m16 10 6-3v10l-6-3"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14h4"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></symbol>
+  <symbol id="i-slides" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3V20h3zM5 3.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zM20.5 13.3c0-3-1.6-4.9-4.2-4.9-1.4 0-2.4.7-2.8 1.4V8.5h-3V20h3v-6c0-1.5.7-2.6 2.1-2.6 1.3 0 1.9 1 1.9 2.6v6h3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 100 90" fill="currentColor"><circle cx="50" cy="32" r="20"/><path d="M8 90c2-22 20-34 42-34s40 12 42 34z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></symbol>
+</svg>
+
+<nav class="nav" aria-label="Main">
+  <div class="container">
+    <a class="brand" href="#home"><img src="images/logo.png" alt="">
+      <span>Movie Trailer Analyzer<small>R26-IT-142</small></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1b3e" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><button type="button" aria-haspopup="true">Project Scope <svg class="caret"><use href="#i-down"/></svg></button>
+        <ul class="drop">
+          <li><a href="#literature">Literature Survey</a></li>
+          <li><a href="#gap">Research Gap</a></li>
+          <li><a href="#problem">Research Problem &amp; Solution</a></li>
+          <li><a href="#objectives">Research Objectives</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#technologies">Technologies Used</a></li>
+        </ul></li>
+      <li><a href="#milestones">Milestones</a></li>
+      <li><button type="button" aria-haspopup="true">Downloads <svg class="caret"><use href="#i-down"/></svg></button>
+        <ul class="drop">
+          <li><a href="#documents">Documents</a></li>
+          <li><a href="#presentations">Presentations</a></li>
+        </ul></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="container">
+    <span class="code">Research Project · R26-IT-142 · SLIIT</span>
+    <h1>AI-Powered Movie Trailer Analyzer for Predicting Audience Reactions and Engagement</h1>
+    <p>A multimodal AI system that analyses a trailer's visuals, audio, viewer comments and YouTube popularity metrics to predict audience response and recommend improvements.</p>
+    <a class="btn" href="#literature">Learn More <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+    <div class="pillars">
+      <div><svg width="24" height="24"><use href="#i-video"/></svg>Video &amp; Audio Analysis</div>
+      <div><svg width="24" height="24"><use href="#i-chart"/></svg>Popularity Metrics Analysis</div>
+      <div><svg width="24" height="24"><use href="#i-chat"/></svg>Comment Sentiment Analysis</div>
+      <div><svg width="24" height="24"><use href="#i-bulb"/></svg>Insight &amp; Recommendation Engine</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROJECT SCOPE ================= -->
+<section id="scope">
+  <div class="container">
+    <div class="sub" id="literature">
+      <span class="label">Project Scope</span>
+      <h2>Literature Survey</h2>
+      <div class="two">
+        <div class="prose">
+          <p>Movie trailers are one of the most important marketing tools in the film industry. With the growth of platforms such as YouTube, audiences now respond to trailers publicly through views, likes, comments and shares, long before a film is released.</p>
+          <p>Predicting that response is still difficult. Studios rely on manual observation, focus groups, post-release feedback or basic engagement statistics. These methods are slow, expensive and subjective, and they cannot explain <em>why</em> a trailer performs the way it does.</p>
+          <p>Previous studies have addressed parts of this problem separately: box-office prediction, social media sentiment, movie review analysis and general engagement metrics. Comment analysis is made harder by slang, emoji, sarcasm and mixed languages common in trailer comments.</p>
+          <div class="refs"><b>References</b>
+            <ol>
+              <li class="ph">Add reference 1 from your literature review</li>
+              <li class="ph">Add reference 2 from your literature review</li>
+              <li class="ph">Add reference 3 from your literature review</li>
+            </ol>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Key observations</h3>
+          <ul>
+            <li>Engagement data is plentiful but fragmented across platforms.</li>
+            <li>Views and likes show <em>how much</em> attention a trailer gets, not <em>why</em>.</li>
+            <li>Video, audio, sentiment and popularity are usually analysed in isolation.</li>
+            <li>Most systems stop at a prediction and offer no improvement guidance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub" id="gap">
+      <h2>Research Gap</h2>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Limitation in existing work</th><th>How this research addresses it</th></tr></thead>
+          <tbody>
+            <tr><td>Trailer analysis often depends on manual interpretation</td><td><span class="yes">✓</span>Automated AI-based analysis pipeline</td></tr>
+            <tr><td>Systems analyse only text, only popularity, or only video/audio</td><td><span class="yes">✓</span>Multimodal analysis using video, audio, comments and metrics</td></tr>
+            <tr><td>Basic sentiment tools struggle with informal trailer comments</td><td><span class="yes">✓</span>Transformer-based (BERT) comment sentiment analysis</td></tr>
+            <tr><td>Popularity metrics are used only descriptively</td><td><span class="yes">✓</span>Machine-learning-based popularity prediction</td></tr>
+            <tr><td>Video/audio analysis rarely provides scene-level emotional intensity</td><td><span class="yes">✓</span>Per-scene emotional intensity scoring</td></tr>
+            <tr><td>Prediction systems lack actionable recommendations</td><td><span class="yes">✓</span>Explainable recommendation engine (MTIRF)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sub ps" id="problem">
+      <h2>Research Problem &amp; Solution</h2>
+      <div class="cards c2">
+        <div class="card"><h3><span class="icon" style="margin:0;background:#fdeceb;color:#d93a2b"><svg width="22" height="22"><use href="#i-alert"/></svg></span>Research Problem</h3>
+          <p>How can film studios and marketing teams reliably predict audience reaction to a movie trailer, and understand what to improve, when engagement data is large, fragmented and difficult to interpret manually?</p></div>
+        <div class="card sol"><h3><span class="icon" style="margin:0"><svg width="22" height="22"><use href="#i-check"/></svg></span>Proposed Solution</h3>
+          <p>An AI-powered platform that analyses trailer visuals, audio, viewer comments and popularity metrics, fuses them into a unified trailer profile, predicts audience reaction, and generates ranked, explainable recommendations through a web dashboard.</p></div>
+      </div>
+      <div class="video" id="video" role="img" aria-label="System demo video">
+        <div><div class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M7 4.5v15l13-7.5z"/></svg></div>
+        <b style="color:#fff;font-family:var(--f-head)">System Demonstration</b><br><span style="font-size:.92rem">Demo video will be embedded here</span></div>
+      </div>
+    </div>
+
+    <div class="sub" id="objectives">
+      <h2>Research Objectives</h2>
+      <div class="mainobj"><span class="label">Main objective</span>To design and develop an AI-powered movie trailer analysis system that predicts audience reactions and engagement by combining video and audio features, viewer comment sentiment, popularity metrics and an explainable recommendation framework.</div>
+      <div class="cards c4">
+        <div class="card obj"><div class="icon"><svg width="24" height="24"><use href="#i-video"/></svg></div><span class="num">SUB-OBJECTIVE 01</span><h3>Video &amp; Audio Analysis</h3><p>Extract scene-level visual, emotional and acoustic features from trailers.</p>
+          <ul><li>Object and motion detection</li><li>Facial emotion recognition</li><li>Audio energy analysis</li><li>Emotional intensity per scene</li></ul></div>
+        <div class="card obj"><div class="icon"><svg width="24" height="24"><use href="#i-chart"/></svg></div><span class="num">SUB-OBJECTIVE 02</span><h3>Popularity Metrics Analysis</h3><p>Predict audience reaction from YouTube engagement metrics.</p>
+          <ul><li>Views, likes and comments</li><li>Like ratio and engagement rate</li><li>View growth indicators</li><li>Reaction-level prediction</li></ul></div>
+        <div class="card obj"><div class="icon"><svg width="24" height="24"><use href="#i-chat"/></svg></div><span class="num">SUB-OBJECTIVE 03</span><h3>Comment Sentiment Analysis</h3><p>Classify viewer comments and extract audience opinion topics.</p>
+          <ul><li>Comment preprocessing</li><li>Language detection</li><li>BERT sentiment classification</li><li>Topic extraction</li></ul></div>
+        <div class="card obj"><div class="icon"><svg width="24" height="24"><use href="#i-bulb"/></svg></div><span class="num">SUB-OBJECTIVE 04</span><h3>Insight &amp; Recommendation Engine</h3><p>Fuse all outputs and generate ranked improvement recommendations.</p>
+          <ul><li>Audience reaction prediction</li><li>Feature importance analysis</li><li>Benchmark gap analysis</li><li>Recommendation cards</li></ul></div>
+      </div>
+    </div>
+
+    <div class="sub" id="methodology">
+      <h2>Methodology</h2>
+      <p class="muted" style="max-width:70ch;margin-bottom:24px">The system follows a modular architecture. Each component processes one type of trailer data and passes structured output to a fusion layer, which drives the final prediction and recommendations.</p>
+      <div class="arch">
+        <svg viewBox="0 0 1000 300" role="img" aria-label="High-level system architecture">
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#2f63e8"/></marker></defs>
+          <g font-family="Manrope, sans-serif" text-anchor="middle">
+            <rect x="10" y="115" width="140" height="70" rx="10" fill="#0d1b3e"/>
+            <text x="80" y="146" fill="#fff" font-weight="700" font-size="15">Trailer Input</text>
+            <text x="80" y="166" fill="#c9d3ee" font-size="12">YouTube URL / video</text>
+
+            <g fill="#fff" stroke="#2f63e8" stroke-width="1.5">
+              <rect x="210" y="20" width="200" height="70" rx="10"/><rect x="210" y="115" width="200" height="70" rx="10"/><rect x="210" y="210" width="200" height="70" rx="10"/>
+            </g>
+            <text x="310" y="51" fill="#0d1b3e" font-weight="700" font-size="15">Video &amp; Audio Analysis</text>
+            <text x="310" y="71" fill="#66708a" font-size="12">YOLOv8 · emotion · Librosa</text>
+            <text x="310" y="146" fill="#0d1b3e" font-weight="700" font-size="15">Comment Sentiment</text>
+            <text x="310" y="166" fill="#66708a" font-size="12">BERT · language · topics</text>
+            <text x="310" y="241" fill="#0d1b3e" font-weight="700" font-size="15">Popularity Metrics</text>
+            <text x="310" y="261" fill="#66708a" font-size="12">LR · Random Forest · SVM</text>
+
+            <rect x="470" y="115" width="150" height="70" rx="10" fill="#e8eefc" stroke="#2f63e8" stroke-width="1.5"/>
+            <text x="545" y="146" fill="#0d1b3e" font-weight="700" font-size="15">Feature Fusion</text>
+            <text x="545" y="166" fill="#66708a" font-size="12">Unified trailer profile</text>
+
+            <rect x="670" y="115" width="140" height="70" rx="10" fill="#e8eefc" stroke="#2f63e8" stroke-width="1.5"/>
+            <text x="740" y="146" fill="#0d1b3e" font-weight="700" font-size="15">Prediction</text>
+            <text x="740" y="166" fill="#66708a" font-size="12">Audience reaction</text>
+
+            <rect x="855" y="115" width="135" height="70" rx="10" fill="#2f63e8"/>
+            <text x="922" y="146" fill="#fff" font-weight="700" font-size="15">Recommendations</text>
+            <text x="922" y="166" fill="#dbe5ff" font-size="12">Dashboard cards</text>
+          </g>
+          <g stroke="#2f63e8" stroke-width="1.8" fill="none" marker-end="url(#ah)">
+            <path d="M150 150 H180 V55 H206"/><path d="M150 150 H206"/><path d="M180 150 V245 H206"/>
+            <path d="M410 55 H440 V150 H466"/><path d="M410 150 H466"/><path d="M410 245 H440 V150"/>
+            <path d="M620 150 H666"/><path d="M810 150 H851"/>
+          </g>
+        </svg>
+      </div>
+      <p class="caption">Figure 1: High-level system architecture</p>
+      <div class="layers">
+        <div><b>1. Data Acquisition</b>Videos, comments and metrics from YouTube</div>
+        <div><b>2. Processing</b>Preprocess video, audio, text and metrics</div>
+        <div><b>3. AI Analysis</b>Vision, NLP, audio and ML models</div>
+        <div><b>4. Feature Fusion</b>Combine component outputs</div>
+        <div><b>5. Prediction</b>Reaction level and recommendations</div>
+        <div><b>6. Dashboard</b>Charts, labels and recommendation cards</div>
+      </div>
+    </div>
+
+    <div class="sub" id="technologies">
+      <h2>Technologies Used</h2>
+      <div class="tech">
+        <div><b>Python</b><span>Core language for AI and analytics</span></div>
+        <div><b>YouTube Data API</b><span>Trailer metadata, comments, metrics</span></div>
+        <div><b>OpenCV</b><span>Frame extraction and motion analysis</span></div>
+        <div><b>YOLOv8</b><span>Object detection in frames</span></div>
+        <div><b>DeepFace</b><span>Facial emotion recognition</span></div>
+        <div><b>CLIP</b><span>Zero-shot scene classification</span></div>
+        <div><b>Librosa</b><span>Audio feature extraction</span></div>
+        <div><b>FFmpeg</b><span>Audio and video processing</span></div>
+        <div><b>BERT</b><span>Transformer sentiment classification</span></div>
+        <div><b>TensorFlow / PyTorch</b><span>Deep learning models</span></div>
+        <div><b>scikit-learn</b><span>ML model training and evaluation</span></div>
+        <div><b>Pandas / NumPy</b><span>Data processing and features</span></div>
+        <div><b>FastAPI / Flask</b><span>Backend REST APIs</span></div>
+        <div><b>React + Vite</b><span>Web dashboard</span></div>
+        <div><b>Firebase</b><span>Authentication and data storage</span></div>
+        <div><b>Docker</b><span>Containerised deployment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MILESTONES ================= -->
+<section id="milestones" class="alt">
+  <div class="container">
+    <span class="label">Milestones</span>
+    <h2 style="margin-bottom:36px">Timeline in Brief</h2>
+    <ul class="timeline" id="timeline"></ul>
+  </div>
+</section>
+
+<!-- ================= DOWNLOADS ================= -->
+<section id="downloads">
+  <div class="container">
+    <div class="sub" id="documents">
+      <span class="label">Downloads</span>
+      <h2>Documents</h2>
+      <div class="cards c3" id="docs"></div>
+    </div>
+    <div class="sub" id="presentations">
+      <h2>Presentations</h2>
+      <div class="cards c4" id="pres"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT US ================= -->
+<section id="about" class="alt">
+  <div class="container">
+    <span class="label" style="text-align:center">About Us</span>
+    <h2 style="text-align:center">Meet Our Team</h2>
+    <p class="teamhead">Supervisors</p>
+    <div class="cards c2 sup" id="sups"></div>
+    <p class="teamhead">Research Team</p>
+    <div class="cards c4" id="team"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <span class="label">Contact Us</span>
+    <h2 style="margin-bottom:28px">Get in Touch</h2>
+    <div class="contact">
+      <form id="cf" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="cf-name">Name<input id="cf-name" name="name" required placeholder="Your name"></label>
+        <label for="cf-email">Email address<input id="cf-email" name="email" type="email" required placeholder="you@example.com"></label>
+        <label for="cf-msg">Message<textarea id="cf-msg" name="message" required placeholder="Your message"></textarea></label>
+        <button class="btn submit" type="submit">Submit</button>
+        <p class="ok" id="cf-ok" hidden>Thank you! Your message has been sent.</p>
+      </form>
+      <div class="cdetails">
+        <h3>Contact Details</h3>
+        <div><svg width="20" height="20"><use href="#i-mail"/></svg><span><b>Email</b><span class="ph" style="color:#9eabcf">team-email@example.com</span></span></div>
+        <div><svg width="20" height="20"><use href="#i-pin"/></svg><span><b>Institution</b>Sri Lanka Institute of Information Technology, New Kandy Road, Malabe</span></div>
+        <div><svg width="20" height="20"><use href="#i-file"/></svg><span><b>Research Code</b>R26-IT-142 · Faculty of Computing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><span>© 2026 R26-IT-142 · Sri Lanka Institute of Information Technology</span><span>AI-Powered Movie Trailer Analyzer</span></div></footer>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
