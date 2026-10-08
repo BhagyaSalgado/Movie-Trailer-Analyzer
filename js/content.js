@@ -15,7 +15,7 @@ const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1NJbVSpjDbUlP2yVa8q
 /* Milestones. Marks below follow the SLIIT allocation used by previous research groups — confirm against your module outline. */
 const MILESTONES=[
   {date:"March 2026",title:"Project Proposal",desc:"Presentation and report defining the research problem, objectives and proposed solution for approval.",marks:12},
-  {date:"Date TBC",title:"Progress Presentation I",desc:"Review of 50% completion, highlighting gaps or inconsistencies in the design and requirements.",marks:15},
+  {date:"May 2026",title:"Progress Presentation I",desc:"Review of 50% completion, highlighting gaps or inconsistencies in the design and requirements.",marks:15},
   {date:"Date TBC",title:"Research Paper",desc:"Paper describing the contribution to existing knowledge, with due recognition of referenced work.",marks:10},
   {date:"Date TBC",title:"Progress Presentation II",desc:"Review of 90% completion with a system demonstration and research poster.",marks:18},
   {date:"Date TBC",title:"Website Assessment",desc:"Public website presenting the research scope, milestones, documents and team.",marks:2},
@@ -38,7 +38,7 @@ const DOCS=[
 ];
 const PRES=[
   ["Proposal Presentation","https://drive.google.com/file/d/11QsB1Mz98ZnlGR_d0I1-vekERx6K_Jws/view?usp=sharing"],
-  ["Progress Presentation I",""],
+  ["Progress Presentation I","https://drive.google.com/file/d/11vdQithbPgB5xwi77UUZp_U-Uuy_1tL3/view?usp=sharing"],
   ["Progress Presentation II","https://drive.google.com/file/d/1-ALQJZX8B208tCrI_Lu1tYvpbmoCdeW1/view?usp=sharing"],
   ["Final Presentation",""]
 ];
