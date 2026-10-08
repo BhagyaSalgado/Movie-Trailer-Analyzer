@@ -5,7 +5,7 @@ document.getElementById('timeline').innerHTML=MILESTONES.map(m=>{
   return `<li class="tl"><span class="date">${m.date}</span><h3>${m.title}</h3><p>${m.desc}</p>
   <div class="marks"><span><b>Marks allocated:</b> ${m.marks}%</span><span class="bar" aria-hidden="true"><i style="width:${prev}%"></i><i class="cur" style="width:${m.marks}%"></i></span></div></li>`;
 }).join('');
-const getBtn=url=>url?`<a class="get" href="${url}" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-dl"/></svg>View / Download</a>`:`<span class="get soon"><svg width="16" height="16"><use href="#i-dl"/></svg>Available soon</span>`;
+const getBtn=url=>Array.isArray(url)?`<div class="multi">${url.map(([l,u])=>`<a class="get" href="${u}" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-dl"/></svg>${l}</a>`).join('')}</div>`:url?`<a class="get" href="${url}" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#i-dl"/></svg>View / Download</a>`:`<span class="get soon"><svg width="16" height="16"><use href="#i-dl"/></svg>Available soon</span>`;
 document.getElementById('docs').innerHTML=DOCS.map(([t,d,u])=>`<div class="card dl"><span class="ftype pdf"><svg width="20" height="20"><use href="#i-file"/></svg>PDF</span><h3>${t}</h3><p>${d}</p>${getBtn(u)}</div>`).join('');
 document.getElementById('pres').innerHTML=PRES.map(([t,u])=>`<div class="card dl"><span class="ftype ppt"><svg width="20" height="20"><use href="#i-slides"/></svg>SLIDES</span><h3>${t}</h3><p></p>${getBtn(u)}</div>`).join('');
 const person=p=>`<div class="card person"><div class="photo">${p.photo?`<img src="${p.photo}" alt="${p.name}" loading="lazy">`:`<svg><use href="#i-user"/></svg>`}</div><div class="body"><h3>${p.name}</h3><div class="role">${p.role}</div><div class="meta">${p.meta}</div>
@@ -63,3 +63,6 @@ addEventListener('scroll',()=>{
   }
   draw();addEventListener('resize',()=>{const x2=c.getContext('2d');x2.setTransform(1,0,0,1,0,0);draw();});
 })();
+
+/* link to the shared Drive folder */
+document.getElementById('drive-all').href=DRIVE_FOLDER;
