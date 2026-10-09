@@ -49,5 +49,5 @@ const TEAM=[
   {name:"Salgado M.B.U.",role:"Group Leader",meta:"Popularity Metrics Analysis<br>Department of Information Technology",photo:"images/team/salgado.jpg",linkedin:"https://www.linkedin.com/in/bhagya-salgado-b640a520a/",email:"mbhagyasalgado@gmail.com"},
   {name:"De Silva T.R.R.",role:"Group Member",meta:"Comment Sentiment Analysis<br>Department of Information Technology",photo:"images/team/de-silva.jpg",linkedin:"https://www.linkedin.com/in/rivithranjuna/",email:"it22236296@my.sliit.lk"},
   {name:"Sampath P.D.D.I.",role:"Group Member",meta:"Insight & Recommendation Engine<br>Department of Information Technology",photo:"images/team/sampath.jpg",linkedin:"",email:""},
-  {name:"Himasha Y.H.P.",role:"Group Member",meta:"Video & Audio Analysis<br>Department of Information Technology",photo:"images/team/himasha.jpg",linkedin:"",email:""}
+  {name:"Himasha Y.H.P.",role:"Group Member",meta:"Video & Audio Analysis<br>Department of Information Technology",photo:"images/team/himasha.jpg",linkedin:"https://www.linkedin.com/in/prabodhi-himasha-7a50b0316/",email:"it22347480@my.sliit.lk"}
 ];
