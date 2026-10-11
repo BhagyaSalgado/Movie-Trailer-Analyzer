@@ -9,7 +9,7 @@ It's a static site (HTML, CSS and JavaScript) with no build step.
 ```
 index.html        Page layout and sections
 css/style.css     Styles
-js/content.js     All editable content (milestones, downloads, team, demo video)
+js/content.js     All editable content (milestones, downloads, team)
 js/main.js        Rendering, menu, contact form
 images/           Logo, favicon, team photos (images/team/)
 ```
@@ -20,7 +20,6 @@ Most changes happen in **`js/content.js`**:
 
 | What | Where |
 |---|---|
-| Demo video | `DEMO_VIDEO_ID`: the YouTube ID (the part after `watch?v=`) |
 | Milestone dates and marks | `MILESTONES` |
 | Document and slide links | Third value in each `DOCS` entry, second value in each `PRES` entry (for example a Google Drive share link) |
 | Team details | `SUPS` and `TEAM`: `photo`, `linkedin`, `email` |

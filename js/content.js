@@ -2,9 +2,6 @@
    EDIT THIS FILE to update the website content.
    ===================================================== */
 
-/* Demo video: paste a YouTube video ID (the part after watch?v=). Leave "" to show the placeholder. */
-const DEMO_VIDEO_ID = "";
-
 /* Contact form: handled by api/contact.js on Vercel (see README → Contact form). */
 
 const DRIVE_FOLDER = "https://drive.google.com/drive/folders/1NJbVSpjDbUlP2yVa8q1N7v0w4Q7WDQF-?usp=sharing";
@@ -43,7 +40,7 @@ const PRES=[
 /* Team: photo = path like "images/team/salgado.jpg", linkedin = full URL, email = address. */
 const SUPS=[
   {name:"Ms. Dushanthi Kuruppu",role:"Supervisor",meta:"Lecturer<br>Department of First Year Division<br>Faculty of Computing",photo:"images/team/dushanthi-kuruppu.jpg",linkedin:"https://www.linkedin.com/in/sadeepa-kuruppu-588179190/",email:"dushanthi.k@sliit.lk"},
-  {name:"Ms. Kaushika Kavindi",role:"Co-supervisor",meta:"Assistant Lecturer<br>Department of Information Technology<br>Faculty of Computing",photo:"images/team/kaushika-kavindi.jpg",linkedin:"https://www.linkedin.com/in/kaushi/",email:"kaushika.k@sliit.lk"}
+  {name:"Ms. Kaushika Kahatapitiya",role:"Co-supervisor",meta:"Assistant Lecturer<br>Department of Information Technology<br>Faculty of Computing",photo:"images/team/kaushika-kahatapitiya.jpg",linkedin:"https://www.linkedin.com/in/kaushi/",email:"kaushika.k@sliit.lk"}
 ];
 const TEAM=[
   {name:"Salgado M.B.U.",role:"Group Leader",meta:"Popularity Metrics Analysis<br>Department of Information Technology",photo:"images/team/salgado.jpg",linkedin:"https://www.linkedin.com/in/bhagya-salgado-b640a520a/",email:"mbhagyasalgado@gmail.com"},

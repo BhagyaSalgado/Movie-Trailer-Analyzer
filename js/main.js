@@ -29,9 +29,6 @@ cf.addEventListener('submit',async e=>{
   ok.hidden=false;btn.disabled=false;btn.textContent='Submit';
 });
 
-/* demo video */
-if(DEMO_VIDEO_ID){document.getElementById('video').innerHTML=`<iframe src="https://www.youtube.com/embed/${DEMO_VIDEO_ID}" title="System demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;}
-
 /* mobile menu */
 const menu=document.getElementById('menu'),bg=document.getElementById('burger');
 bg.addEventListener('click',()=>{const o=menu.classList.toggle('open');bg.setAttribute('aria-expanded',o);});
