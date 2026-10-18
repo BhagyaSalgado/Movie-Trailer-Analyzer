@@ -1,6 +1,6 @@
 # R26-IT-142 Research Website
 
-Project website for **AI-Powered Movie Trailer Analyzer for Predicting Audience Reactions and Engagement**, a research project at the Sri Lanka Institute of Information Technology (SLIIT).
+Project website for **AI-Powered Movie Trailer Analyzer for Predicting Audience Reactions**, a research project at the Sri Lanka Institute of Information Technology (SLIIT).
 
 It's a static site (HTML, CSS and JavaScript) with no build step.
 
