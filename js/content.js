@@ -28,8 +28,10 @@ const DOCS=[
     ["Sampath P.D.D.I.","https://drive.google.com/file/d/1beK1k9TlLg1NLCaJPI1pO-rWrlB2DZKQ/view?usp=sharing"],
     ["Himasha Y.H.P.","https://drive.google.com/file/d/1fHnDKrR7ztBAHDcxWczFJXCLMVtMMKzb/view?usp=sharing"]
   ]],
-  ["Research Paper","Paper submitted for publication",""],
-  ["Final Report","Group and individual final reports",""]
+  ["Research Paper","Paper submitted for publication","https://drive.google.com/file/d/1UuksqPbQ3QCUIJfVN_axJanu7BqTz8lr/view?usp=sharing"],
+  ["Final Report","Individual final reports",[
+    ["Salgado M.B.U.","https://drive.google.com/file/d/1LoLtyalxybmnVF29Zr6UBmGk9wDE2jAu/view?usp=sharing"]
+  ]]
 ];
 const PRES=[
   ["Proposal Presentation","https://drive.google.com/file/d/11QsB1Mz98ZnlGR_d0I1-vekERx6K_Jws/view?usp=sharing"],
