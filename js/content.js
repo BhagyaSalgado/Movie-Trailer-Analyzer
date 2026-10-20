@@ -29,15 +29,19 @@ const DOCS=[
     ["Himasha Y.H.P.","https://drive.google.com/file/d/1fHnDKrR7ztBAHDcxWczFJXCLMVtMMKzb/view?usp=sharing"]
   ]],
   ["Research Paper","Paper submitted for publication","https://drive.google.com/file/d/1UuksqPbQ3QCUIJfVN_axJanu7BqTz8lr/view?usp=sharing"],
-  ["Final Report","Individual final reports",[
-    ["Salgado M.B.U.","https://drive.google.com/file/d/1LoLtyalxybmnVF29Zr6UBmGk9wDE2jAu/view?usp=sharing"]
+  ["Final Report","Group and individual final reports",[
+    ["Group Report","https://drive.google.com/file/d/1tMMo070VuVrono7XAkiXs-IZ_uLxkW69/view?usp=sharing"],
+    ["Salgado M.B.U.","https://drive.google.com/file/d/1LoLtyalxybmnVF29Zr6UBmGk9wDE2jAu/view?usp=sharing"],
+    ["De Silva T.R.R.","https://drive.google.com/file/d/1tcIbEl4vB8AtLe6pNO2Djv84t5Gd7jmK/view?usp=sharing"],
+    ["Sampath P.D.D.I.","https://drive.google.com/file/d/1zbIyT-v2oZdJis5gqpqi7rnmtpXPgTWX/view?usp=sharing"],
+    ["Himasha Y.H.P.","https://drive.google.com/file/d/15EqTDikrzXNuKplJxhwz7LrXKP9db8VF/view?usp=sharing"]
   ]]
 ];
 const PRES=[
   ["Proposal Presentation","https://drive.google.com/file/d/11QsB1Mz98ZnlGR_d0I1-vekERx6K_Jws/view?usp=sharing"],
   ["Progress Presentation I","https://drive.google.com/file/d/11vdQithbPgB5xwi77UUZp_U-Uuy_1tL3/view?usp=sharing"],
   ["Progress Presentation II","https://drive.google.com/file/d/1-ALQJZX8B208tCrI_Lu1tYvpbmoCdeW1/view?usp=sharing"],
-  ["Final Presentation",""]
+  ["Final Presentation","https://drive.google.com/file/d/1bri4hgkGQsrZj5sBuRLLaPjfKlwDBb8R/view?usp=sharing"]
 ];
 /* Team: photo = path like "images/team/salgado.jpg", linkedin = full URL, email = address. */
 const SUPS=[
