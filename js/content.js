@@ -55,7 +55,7 @@ const SUPS=[
 ];
 const TEAM=[
   {name:"Salgado M.B.U.",role:"Group Leader",meta:"IT22110152<br>Popularity Metrics Analysis<br>Department of Information Technology",photo:"images/team/salgado.jpg",linkedin:"https://www.linkedin.com/in/bhagya-salgado-b640a520a/",email:"mbhagyasalgado@gmail.com"},
-  {name:"De Silva T.R.R.",role:"Group Member",meta:"IT22236296<br>Comment Sentiment Analysis<br>Department of Information Technology",photo:"images/team/de-silva.jpg",linkedin:"https://www.linkedin.com/in/rivithranjuna/",email:"it22236296@my.sliit.lk"},
-  {name:"Sampath P.D.D.I.",role:"Group Member",meta:"IT22189462<br>Insight & Recommendation Engine<br>Department of Information Technology",photo:"images/team/sampath.jpg",linkedin:"https://www.linkedin.com/in/-isuru-sampath/",email:"it22189462@my.sliit.lk"},
-  {name:"Himasha Y.H.P.",role:"Group Member",meta:"IT22347480<br>Video & Audio Analysis<br>Department of Information Technology",photo:"images/team/himasha.jpg",linkedin:"https://www.linkedin.com/in/prabodhi-himasha-7a50b0316/",email:"it22347480@my.sliit.lk"}
+  {name:"De Silva T.R.R.",role:"Group Member",meta:"IT22236296<br>Comment Sentiment Analysis<br>Department of Information Technology",photo:"images/team/de-silva.jpg",linkedin:"https://www.linkedin.com/in/rivithranjuna/",email:"rivithranjuna60@gmail.com"},
+  {name:"Sampath P.D.D.I.",role:"Group Member",meta:"IT22189462<br>Insight & Recommendation Engine<br>Department of Information Technology",photo:"images/team/sampath.jpg",linkedin:"https://www.linkedin.com/in/-isuru-sampath/",email:"dularaisurusampath@gmail.com"},
+  {name:"Himasha Y.H.P.",role:"Group Member",meta:"IT22347480<br>Video & Audio Analysis<br>Department of Information Technology",photo:"images/team/himasha.jpg",linkedin:"https://www.linkedin.com/in/prabodhi-himasha-7a50b0316/",email:"yhprabodhi2000@gmail.com"}
 ];
