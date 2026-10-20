@@ -80,6 +80,10 @@ section.alt{background:var(--bg-alt)}
 @media (max-width:900px){.two{grid-template-columns:1fr}}
 .prose p+p{margin-top:14px}
 .prose p{text-align:justify;hyphens:auto}
+.refs{margin-top:40px}
+.refs h3{margin-bottom:14px}
+.refs ol{margin:0;padding-left:24px;display:grid;gap:10px;font-size:.95rem}
+.refs a{word-break:break-all}
 .info{border:2px solid var(--blue);border-radius:14px;padding:24px;background:#fff}
 .info h3{margin-bottom:14px}
 .info ul{margin:0;padding-left:20px;display:grid;gap:8px}
