@@ -22,6 +22,10 @@ const MILESTONES=[
 ];
 const DOCS=[
   ["Topic Assessment","Topic Assessment Form (TAF)","https://drive.google.com/file/d/1hhhpFu8ep5x-lBX_dxCQxlZkQRE61Ph7/view?usp=sharing"],
+  ["Checklists","Project progress checklists",[
+    ["Checklist 01 – GitHub README","https://drive.google.com/file/d/1nN19wW2gsFtCtaPRWmyXbRABoS1j2pV7/view?usp=sharing"],
+    ["MS Planner","https://drive.google.com/file/d/1roSZDzP_-nnZaVRyXIGRjSJssuoc8KxA/view?usp=sharing"]
+  ],"FILES"],
   ["Project Proposal","Individual proposal reports",[
     ["Salgado M.B.U.","https://drive.google.com/file/d/11sNS4Dn4IW_RZy3SzUCT_wryT-R8-3RN/view?usp=sharing"],
     ["De Silva T.R.R.","https://drive.google.com/file/d/1rMkf9B3knqPg6aNeiHdIXVq5v0UBlBq6/view?usp=sharing"],
